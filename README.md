@@ -18,6 +18,6 @@ To Customer Validation we have added some validations.
 -  No Quote
   -  ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/no_quote.png)
 - No Quote Line
-  -  ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/no _quote_line.png)
+  -  ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/no_quote_line.png)
 
 
