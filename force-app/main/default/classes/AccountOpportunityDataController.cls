@@ -29,6 +29,6 @@ public class AccountOpportunityDataController {
 							   FROM QuoteLineItems) 
 						FROM Quotes)
 				FROM Opportunity 
-				WHERE AccountId = :accountId AND StageName NOT IN ('Closed Won', 'Closed Lost')];
+				WHERE AccountId = :accountId AND StageName NOT IN ('Closed Won', 'Closed Lost') LIMIT 50000];
 	}
 }
