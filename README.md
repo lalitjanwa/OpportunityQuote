@@ -6,8 +6,8 @@ Below are the schema for the project.
 
 Below components were used for this Project.
 * Apex Class
-- * AccountOpportunityDataController
+  - AccountOpportunityDataController
 
 * LWC Component
-- * accountOppQuoteComponent
+  - accountOppQuoteComponent
 
