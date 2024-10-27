@@ -195,7 +195,7 @@
             </lightning-accordion>
         </template>
         <!-- Message for no Opportunities -->
-        <template if:true={opportunitiesWithQuotesAndItems}>
+        <template if:false={opportunitiesWithQuotesAndItems}>
             <div class="slds-align_absolute-center no-quoteline-item">
                 <h3><b>No Opportunity Quote Records found.</b></h3>
             </div>
