@@ -24,7 +24,7 @@ export default class AccountOppQuoteComponent extends LightningElement {
                 
             //loop to set first Quote for each Opportunity and Product Name inside Quote Line Items.
             this.opportunitiesWithQuotesAndItems.forEach(opp => {
-                opp.firstQuoteName = null;
+                opp.firstQuoteId = null;
                 if(opp.Quotes){
                     opp.Quotes.forEach(quote => {
                         if(quote.QuoteLineItems){
@@ -35,8 +35,8 @@ export default class AccountOppQuoteComponent extends LightningElement {
                                 };
                             });
                         }
-                        if (!opp.firstQuoteName && quote.Id) {
-                            opp.firstQuoteName = quote.Id; // Assign the first quote name
+                        if (!opp.firstQuoteId && quote.Id) {
+                            opp.firstQuoteId = quote.Id; // Assign the first quote name
                         }
                     });
                 }
@@ -54,4 +54,6 @@ export default class AccountOppQuoteComponent extends LightningElement {
             this.dispatchEvent(event);
         }
     }
+
+
 }
