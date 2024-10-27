@@ -13,6 +13,10 @@
 @isTest
 public class AccountOpportunityDataControllerTest {
 
+    /**
+    * @description This method to validate the getOpportunitiesWithQuotesAndItems method from AccountOpportunityDataController class.
+    * @author Lalit Janwa | 10-27-2024 
+    **/
     @isTest
     static void testGetOpportunitiesWithQuotesAndItems() {
         //Step 1: Create test data
