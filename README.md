@@ -6,6 +6,9 @@ Below are the schema for the project.
 
 ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/schema.png)
 
+As after checking found Opportunity and Quote have Master-Details same as Quote and Quote Line Item have Master-Details so get all these records into single query.
+-  ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/query.png)
+
 Below components were used for this Project.
 * Apex Class
   - AccountOpportunityDataController : This class is responsible for fetching open Opportunities, Quotes, and Quote Line Items for a specific Account.
