@@ -1,4 +1,4 @@
-#  Oppotunity Quote with Line Items
+#  Opportunity Quote with Line Items
 
 
 
