@@ -8,20 +8,20 @@ Below are the schema for the project.
 
 Below components were used for this Project.
 * Apex Class
-  - AccountOpportunityDataController
+  - AccountOpportunityDataController : This class is responsible for fetching open Opportunities, Quotes, and Quote Line Items for a specific Account.
 
 * LWC Component
-  - accountOppQuoteComponent
+  - accountOppQuoteComponent : This component serves as the UI representation of the data fetched by the Apex class. It displays the retrieved information on the Account detail page, providing users with a clear view of associated Opportunities and Quotes.
  
 The Component will show on the Account level as below.
 -  ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/quote_line_records.png)
 
 To Customer Validation we have added some validations.
--  **No Opportunity Quotes**
+-  **No Opportunity Quotes** : Validation message displayed if no quotes are associated with the account's opportunities.
     - ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/no_opp_quote.png)
--  **No Quote**
+-  **No Quote** : Validation message shown if there are opportunities but no quotes available.
     -  ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/no_quote.png)
-- **No Quote Line**
+- **No Quote Line** : Validation message triggered if there are quotes, but no line items associated with them.
   -  ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/no_quote_line.png)
 
 
