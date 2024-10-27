@@ -85,7 +85,7 @@
                                 <template if:true={oppObj.Quotes}>
                                     <div>
                                         <lightning-accordion class="quote-accordion"
-                                            active-section-name={oppObj.firstQuoteName}>
+                                            active-section-name={oppObj.firstQuoteId}>
                                             <template for:each={oppObj.Quotes} for:item="quote" for:index="index">
                                                 <div key={quote.Id} class="slds-border_top slds-border_bottom slds-border_left slds-border_right">
                                                     <!-- Quote Details -->
