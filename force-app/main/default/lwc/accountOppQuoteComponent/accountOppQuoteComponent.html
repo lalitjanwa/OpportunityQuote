@@ -1,0 +1,153 @@
+<template>
+    <lightning-card title="Opportunity Quote Details">
+        <lightning-accordion class="opportunity-accordion" active-section-name={firstOpp}>
+            <template for:each={opportunitiesWithQuotesAndItems} for:item="oppObj" for:index="index">
+                <div key={oppObj.Id} class="slds-border_top">
+                    <lightning-accordion-section name={oppObj.Id} label={oppObj.Name} class="section-font">
+                        <div class="oppDetails">
+                            <lightning-layout multiple-rows>
+                                <lightning-layout-item size="6">
+                                    <div class="slds-grid fieldDetails">
+                                        <div class="slds-col slds-size_2-of-6">
+                                            <lightning-formatted-text 
+                                                class="record-labels"
+                                                value="Name :">
+                                            </lightning-formatted-text>
+                                        </div>
+                                        <div class="slds-col slds-size_4-of-6">
+                                            <lightning-formatted-text 
+                                                class=""
+                                                value={oppObj.Name}>
+                                            </lightning-formatted-text>
+                                        </div>
+                                    </div>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="6">
+                                    <div class="slds-grid fieldDetails">
+                                        <div class="slds-col slds-size_2-of-6">
+                                            <lightning-formatted-text 
+                                                class="record-labels"
+                                                value="Type :">
+                                            </lightning-formatted-text>
+                                        </div>
+                                        <div class="slds-col slds-size_4-of-6">
+                                            <lightning-formatted-text 
+                                                class=""
+                                                value={oppObj.Type}>
+                                            </lightning-formatted-text>
+                                        </div>
+                                    </div>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="6">
+                                    <div class="slds-grid fieldDetails">
+                                        <div class="slds-col slds-size_2-of-6">
+                                            <lightning-formatted-text 
+                                                class="record-labels"
+                                                value="Stage Name :">
+                                            </lightning-formatted-text>
+                                        </div>
+                                        <div class="slds-col slds-size_4-of-6">
+                                            <lightning-formatted-text 
+                                                class=""
+                                                value={oppObj.StageName}>
+                                            </lightning-formatted-text>
+                                        </div>
+                                    </div>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        
+                            <template if:true={oppObj.Quotes}>
+                            <div>
+                                <lightning-accordion class="quote-accordion"
+                                    active-section-name={oppObj.firstQuoteName}>
+                                    <template for:each={oppObj.Quotes} for:item="quote" for:index="index">
+                                        <div key={quote.Id} class="slds-border_top slds-border_bottom slds-border_left slds-border_right">
+                                        <lightning-accordion-section  name={quote.Id} label={quote.Name}>
+                                            <lightning-layout multiple-rows>
+                                                <lightning-layout-item size="6">
+                                                    <div class="slds-grid fieldDetails">
+                                                        <div class="slds-col slds-size_2-of-6">
+                                                            <lightning-formatted-text 
+                                                                class="record-labels"
+                                                                value="Quote Name :">
+                                                            </lightning-formatted-text>
+                                                        </div>
+                                                        <div class="slds-col slds-size_4-of-6">
+                                                            <lightning-formatted-text 
+                                                                class=""
+                                                                value={quote.Name}>
+                                                            </lightning-formatted-text>
+                                                        </div>
+                                                    </div>
+                                                </lightning-layout-item>
+                                                <lightning-layout-item size="6">
+                                                    <div class="slds-grid fieldDetails">
+                                                        <div class="slds-col slds-size_2-of-6">
+                                                            <lightning-formatted-text 
+                                                                class="record-labels"
+                                                                value="Status :">
+                                                            </lightning-formatted-text>
+                                                        </div>
+                                                        <div class="slds-col slds-size_4-of-6">
+                                                            <lightning-formatted-text 
+                                                                class=""
+                                                                value={quote.Status}>
+                                                            </lightning-formatted-text>
+                                                        </div>
+                                                    </div>
+                                                </lightning-layout-item>
+                                                <lightning-layout-item size="6">
+                                                    <div class="slds-grid fieldDetails">
+                                                        <div class="slds-col slds-size_2-of-6">
+                                                            <lightning-formatted-text 
+                                                                class="record-labels"
+                                                                value="Email :">
+                                                            </lightning-formatted-text>
+                                                        </div>
+                                                        <div class="slds-col slds-size_4-of-6">
+                                                            <lightning-formatted-text 
+                                                                class=""
+                                                                value={quote.Email}>
+                                                            </lightning-formatted-text>
+                                                        </div>
+                                                    </div>
+                                                </lightning-layout-item>
+                                            </lightning-layout>
+
+                                            <template if:true={quote.QuoteLineItems}>
+                                                <div class="quoteLines">
+                                                    <div class="quoteLines-label">
+                                                        Quote Line Items :
+                                                    </div>
+                                                    <div class="quoteLines-table">
+                                                        <lightning-datatable
+                                                                key-field="id"
+                                                                data={quote.QuoteLineItems}
+                                                                columns={columns}>
+                                                        </lightning-datatable>
+                                                    </div>
+                                                </div>
+                                            </template>
+                                            <template if:false={quote.QuoteLineItems}>
+                                                <div class="slds-align_absolute-center no-quoteline-item">
+                                                    <h3><b>No Quote Line Items found.</b></h3>
+                                                </div>
+                                            </template>
+                                        </lightning-accordion-section>
+                                    </div>
+                                    </template>
+                                </lightning-accordion>
+                            </div>
+                            </template>
+                        </div>
+                        <template if:false={oppObj.Quotes}>
+                            <div class="slds-align_absolute-center no-quoteline-item">
+                                <h3><b>No Quote Records found.</b></h3>
+                            </div>
+                        </template>
+                    </lightning-accordion-section>
+                </div>
+            </template>
+        </lightning-accordion>
+    </lightning-card>
+</template>
