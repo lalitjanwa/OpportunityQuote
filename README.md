@@ -1,4 +1,4 @@
-**Oppotunity Quote with Line Items**
+#  Oppotunity Quote with Line Items
 
 We created two components to meet the project needs: an Apex class (AccountOpportunityDataContact) and an LWC (accountOppQuoteComponent). The Apex class fetches open Opportunities, Quotes, and Quote Line Items for an Account in JSON format, which the LWC then uses to display data in the UI. This setup ensures streamlined data retrieval and display across Salesforce.
 
