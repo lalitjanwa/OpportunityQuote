@@ -10,4 +10,7 @@ Below components were used for this Project.
 
 * LWC Component
   - accountOppQuoteComponent
+ 
+The Component will show on the Account level as below.
+
 
