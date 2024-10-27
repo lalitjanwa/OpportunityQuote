@@ -15,6 +15,8 @@ The Component will show on the Account level as below.
 -  ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/quote_line_records.png)
 
 To Customer Validation we have added some validations.
+-  No Opportunity Quotes
+    - ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/no_opp_quote.png)
 -  No Quote
     -  ![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/no_quote.png)
 - No Quote Line
