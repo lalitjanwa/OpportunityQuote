@@ -2,5 +2,6 @@
 
 Below are the schema for the project.
 
-![Uploading image.png…]()
+![Alt text](https://github.com/lalitjanwa/OpportunityQuote/blob/main/images/schema.png)
+
 
